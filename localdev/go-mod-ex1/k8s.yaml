@@ -20,13 +20,13 @@ spec:
           ports:
             - containerPort: 8080
           volumeMounts:
-            - mountPath: /data
+            - mountPath: /go/src/github.com/carltonj2000/go-mod-ex1/data
               name: test-volume
       volumes:
         - name: test-volume
           hostPath:
             # directory location on host
-            path: /renderws/carltonData/cj2023/code/minikube/minikube-gs/localdev/go-mod-ex1/data
+            path: /data
 ---
 apiVersion: v1
 kind: Service

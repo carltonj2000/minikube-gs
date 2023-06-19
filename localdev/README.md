@@ -10,4 +10,5 @@ minikube -p minikube docker-env | source # point to minikube's docker deamon
 docker build -t local/modex1:v1 .
 kubeclt apply -f k8s.yaml
 minikube service local-modex1-svc
+minikube mount /renderws/carltonData/cj2023/code/minikube/minikube-gs/localdev/go-mod-ex1/data:/data
 ```

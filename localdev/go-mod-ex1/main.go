@@ -7,15 +7,15 @@ import (
 	"time"
 )
 
-var version = "0.0.2"
+var version = "0.0.3"
 
 func indexHandler(w http.ResponseWriter, req *http.Request) {
-	localFile, err := os.ReadFile("hello-world.txt")
+	localFile, err := os.ReadFile("./data/hello-world.txt")
 	if err != nil {
 		fmt.Printf("couldn't read file %v\n", err)
 
 	}
-	fmt.Fprintf(w, "<h1>hello world :) </h1> \n Version %s\n File Content:%s", version, localFile)
+	fmt.Fprintf(w, "<h1>hello world ;&gt; </h1> \n Version %s\n File Content:%s", version, localFile)
 }
 
 func headersHandler(w http.ResponseWriter, req *http.Request) {
